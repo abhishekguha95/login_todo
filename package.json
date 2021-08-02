@@ -1,0 +1,27 @@
+{
+  "name": "login_todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekguha95/login_todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "sequelize": "^5.22.4",
+    "sqlite3": "^4.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/abhishekguha95/login_todo/issues"
+  },
+  "homepage": "https://github.com/abhishekguha95/login_todo#readme"
+}
