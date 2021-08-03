@@ -9,6 +9,7 @@ const mainRoutes = require("./backend/routes/mainRoutes");
 //const cookieParser = require("cookie-parser");
 
 // setting path of view folder
+app.use(express.static(__dirname + '/client'));
 app.set("views", __dirname + "/client/views");
 
 // setting view-engine as ejs
