@@ -1,2 +1,3 @@
-# A basic to-do list application with user sign-up, sign-in.
-# Using Node.js, express-sessions for login functionality, sqlite for database and Sequelize for connecting with sqlite. 
+# A basic to-do list application with user sign-up and login functionality.
+# Used HTML, CSS and BootStrap for frontend, Node.js, Express.js for backend and sqlite for database used.
+# Used Express sessions for login system and Squelize library for sqlite operations.
