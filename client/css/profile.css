@@ -1,0 +1,11 @@
+.main-head{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+.logout-button-class{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
