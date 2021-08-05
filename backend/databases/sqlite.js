@@ -41,7 +41,7 @@ const List = sequelize.define("list", {
   },
 
   done: {
-    type: Sequelize.STRING,
+    type: Sequelize.BOOLEAN,
     // allowNull: false
   },
 

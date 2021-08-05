@@ -24,7 +24,7 @@ router.route("/addtodo").post(postController.addTodo);
 router.route("/logout").post(postController.logout);
 
 // router.route("/editTodo/:id").get(postController.editTodo);
-// router.route("/doneTodo/:id").get(postController.doneTodo);
+router.route("/doneTodo/:id").get(mainController.doneTodo);
 router.route("/deleteTodo/:id").get(mainController.deleteTodo);
 
 // router.route("/profile").get(checklogin, mainController.profile);

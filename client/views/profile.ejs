@@ -16,7 +16,8 @@
     <!-- importing font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
 
     <title>Profile</title>
 </head>
@@ -39,7 +40,7 @@
     -->
 
     <div class="main-head">
-        <h2>Hello <%= pro %>
+        <h2>Hello <%= username %>
         </h2>
         <div class="logout-button">
             <form method="post" action="/logout">
@@ -80,7 +81,13 @@
                     <% for(var i=0; i <todoList.length ; i++) { %>
                         <tr>
                             <td class="todo-text">
-                                <%= todoList[i].item %>
+                                <% if (todoList[i].done==0 ){ %>
+                                    <%= todoList[i].item %>
+                                        <% } else { %>
+                                            <s>
+                                                <%= todoList[i].item %>
+                                            </s>
+                                            <% } %>
                             </td>
                             <td>
                                 <form class="todo-edit" method="post" action="/editTodo/<%= todoList[i].id %>">
@@ -90,7 +97,7 @@
                                 </form>
                             </td>
                             <td>
-                                <form class="todo-edit" method="post" action="/doneTodo/<%= todoList[i].id %>">
+                                <form class="todo-edit" method="GET" action="/doneTodo/<%= todoList[i].id %>">
                                     <button class="btn btn-lg btn-success btn-block" type="submit">
                                         Done
                                     </button>
@@ -109,7 +116,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
 </body>

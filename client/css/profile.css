@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(-45deg, #164a41, #4D774E, #9DC88D);
+    background: linear-gradient(-45deg, #0f3a33, #39633a, #4b8d35, #6c975c);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
   
@@ -112,6 +112,6 @@ td {
 .todo-text {
   color: white;
   font-size: 25px;
-  font-family: "Shadows Into Light", cursive;
-  font-weight: bold;
+  font-family: 'Kaushan Script', cursive;
+  /* font-weight: bold; */
 }

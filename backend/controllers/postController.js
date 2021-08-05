@@ -84,7 +84,7 @@ function addTodo(req, res) {
   List.create({
     item: todoText,
     edit: false,
-    done: "not done",
+    done: false,
     user_id: req.session.user_id,
   })
     .then((newtodo) => {
