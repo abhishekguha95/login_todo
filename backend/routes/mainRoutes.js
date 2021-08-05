@@ -20,8 +20,12 @@ console.log("before posrctrl invoked in route");
 
 router.route("/signup").post(postController.signup);
 router.route("/signin").post(postController.signin);
-router.route("/add").post(postController.addTodo);
+router.route("/addtodo").post(postController.addTodo);
 router.route("/logout").post(postController.logout);
+
+// router.route("/editTodo/:id").get(postController.editTodo);
+// router.route("/doneTodo/:id").get(postController.doneTodo);
+router.route("/deleteTodo/:id").get(mainController.deleteTodo);
 
 // router.route("/profile").get(checklogin, mainController.profile);
 

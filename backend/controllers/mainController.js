@@ -43,9 +43,36 @@ function profile(req, res) {
   }
 }
 
+function deleteTodo(req, res) {
+  // console.log("with req")
+  // console.log(req)
+  // const id = req.params.id
+  List.destroy({
+    where: {
+      user_id: req.session.user_id,
+      id: req.params.id,
+    },
+  }).then(() => {
+    List.findAll({
+      where: { user_id: req.session.user_id },
+      raw: true,
+    })
+      .then((todoList) => {
+        console.log("with new todo");
+        console.log(todoList);
+        return res.render("profile", { pro, todoList });
+      })
+      .catch((err) => {
+        console.log("error in profile after delete todo: ", err);
+        res.redirect("/signin");
+      });
+  });
+}
+
 module.exports = {
   //home: home,
   signup: signup,
   signin: signin,
   profile: profile,
+  deleteTodo: deleteTodo,
 };

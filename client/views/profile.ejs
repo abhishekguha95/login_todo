@@ -53,7 +53,7 @@
 
     <div class="div1">
         <div class="add-todo">
-            <form class="form1" method="post" action="/add">
+            <form class="form1" method="post" action="/addtodo">
                 <label class="add-todo-label" for="addTodo">To-do</label>
                 <input class="add-todo-input" type="text" id="addTodo" name="todoText" placeholder="add your to-do"
                     autofocus />
@@ -83,21 +83,21 @@
                                 <%= todoList[i].item %>
                             </td>
                             <td>
-                                <form class="todo-edit" method="post" action="/abcd">
+                                <form class="todo-edit" method="post" action="/editTodo/<%= todoList[i].id %>">
                                     <button class="btn btn-lg btn-primary btn-block" type="submit">
                                         Edit
                                     </button>
                                 </form>
                             </td>
                             <td>
-                                <form class="todo-edit" method="post" action="/abcd">
+                                <form class="todo-edit" method="post" action="/doneTodo/<%= todoList[i].id %>">
                                     <button class="btn btn-lg btn-success btn-block" type="submit">
                                         Done
                                     </button>
                                 </form>
                             </td>
                             <td>
-                                <form class="todo-edit" method="post" action="/abcd">
+                                <form class="todo-edit" method="GET" action="/deleteTodo/<%= todoList[i].id %>">
                                     <button class="btn btn-lg btn-danger btn-block" type="submit">
                                         Delete
                                     </button>
